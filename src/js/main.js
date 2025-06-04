@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     usernameInput.addEventListener('input', function () {
       const value = usernameInput.value;
       // Regex: min 8 chars, 1 uppercase, 1 number, 1 special char
-      const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+      
+const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~]).{8,}$/;
       if (!regex.test(value)) {
         validationDiv.style.display = 'block';
         validationDiv.textContent = 'Username must be at least 8 characters, include 1 uppercase letter, 1 number, and 1 special character.';
